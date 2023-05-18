@@ -30,7 +30,7 @@ setxkbmap -layout de
 #Monitor Config
 bspc config remove_unplugged_monitors true
 bspc config remove_disabled_monitors true
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor -d 1 2 3 4 5 6
 
 #BSPWM Config
 bspc config border_width        0
@@ -71,13 +71,13 @@ bspc rule -a Discord desktop='^6'
 bspc rule -a synergy desktop='^9'
 
 #Auto-Start
-bspc desktop -f ^9
-variety &
-sleep 0.50
-urxvtc &
+#bspc desktop -f ^9
+#variety &
+#sleep 0.50
+#urxvtc &
 lxpolkit &
 picom --config "$HOME/.config/bspwm/picom.conf" &
 flameshot &
-synology-drive &
-bspc desktop -f ^1
+#synology-drive &
+#bspc desktop -f ^1
 
